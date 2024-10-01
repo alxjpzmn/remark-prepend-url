@@ -1,0 +1,55 @@
+{
+  "name": "remark-prepend-url",
+  "version": "0.0.1",
+  "description": "remark plugin to prepend an absolute url to relative links",
+  "license": "MIT",
+  "keywords": [
+    "markdown",
+    "mdast",
+    "plugin",
+    "remark",
+    "remark-plugin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alxjpzmn/remark-prepend-url.git"
+  },
+  "bugs": "https://github.com/alxjpzmn/remark-prepend-url/issues",
+  "author": "alxjpzmn",
+  "type": "module",
+  "scripts": {
+    "build": "tsc --pretty -p . -d",
+    "watch": "tsc -w -p .",
+    "mocha": "mocha --color index.test.js",
+    "test": "npm run build && npm run mocha"
+  },
+  "main": "./index.js",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./index.d.ts",
+        "default": "./index.js"
+      }
+    }
+  },
+  "files": [
+    "./index.d.ts",
+    "./index.js",
+    "./index.js.map",
+    "./LICENSE"
+  ],
+  "dependencies": {
+    "unist-util-visit": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^5.0.0",
+    "@types/mocha": "^10.0.8",
+    "@types/node": "^20.0.0",
+    "@types/unist": "^3.0.3",
+    "chai": "^5.1.1",
+    "mocha": "^10.7.3",
+    "remark": "^15.0.1",
+    "remark-parse": "^11.0.0",
+    "typescript": "^5.0.0"
+  }
+}
