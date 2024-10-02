@@ -1,6 +1,6 @@
 {
   "name": "remark-prepend-url",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "remark plugin to prepend an absolute url to relative links",
   "license": "MIT",
   "keywords": [
