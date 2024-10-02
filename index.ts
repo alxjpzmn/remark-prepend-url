@@ -1,13 +1,9 @@
 import { visit } from 'unist-util-visit';
-import { Node } from 'unist';
-
-interface LinkNode extends Node {
-  url?: string;
-}
+import type { Root } from 'mdast'
 
 const remarkPrependUrl = (baseUrl: URL) => {
-  return (tree: Node) => {
-    visit(tree, 'link', (node: LinkNode) => {
+  return (tree: Root) => {
+    visit(tree, 'link', (node) => {
       if (node.url && node.url.startsWith('/')) {
         try {
           node.url = new URL(node.url, baseUrl).href;
